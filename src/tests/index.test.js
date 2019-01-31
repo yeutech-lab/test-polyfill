@@ -1,4 +1,4 @@
-import polyfill from '../index';
+import { polyfill } from '../index';
 
 describe('polyfill', () => {
   it('should polyfill fetch-mock', (done) => {

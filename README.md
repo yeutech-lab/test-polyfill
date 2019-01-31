@@ -1,6 +1,6 @@
 # test-polyfill
 
-[![Build Status](https://travis-ci.org/yeutech-lab/.svg?branch=master)](https://travis-ci.org/yeutech-lab/)
+[![Build Status](https://travis-ci.org/yeutech-lab/test-polyfill.svg?branch=master)](https://travis-ci.org/yeutech-lab/test-polyfill)
 [![npm Version](https://img.shields.io/npm/v/@yeutech-lab/test-polyfill.svg?style=flat)](https://www.npmjs.com/package/@yeutech-lab/test-polyfill)
 [![License](https://img.shields.io/npm/l/@yeutech-lab/test-polyfill.svg?style=flat)](https://www.npmjs.com/package/@yeutech-lab/test-polyfill)
 [![NPM monthly downloads](https://img.shields.io/npm/dm/@yeutech-lab/test-polyfill.svg?style=flat)](https://npmjs.org/package/@yeutech-lab/test-polyfill)

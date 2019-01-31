@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/yeutech-lab/test-polyfill/compare/v1.0.0...v1.0.1) (2019-01-31)
+
+
+### Bug Fixes
+
+* **release:** GitHub release https://github.com/yeutech-lab/test-polyfill ([2bebd75](https://github.com/yeutech-lab/test-polyfill/commit/2bebd75))
+
 # 1.0.0 (2019-01-31)
 
 

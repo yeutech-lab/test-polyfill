@@ -1,6 +1,10 @@
 {
   "name": "@yeutech-lab/test-polyfill",
+<<<<<<< HEAD
   "version": "0.0.0-development",
+=======
+  "version": "1.0.1",
+>>>>>>> 9584e7a6eca920685d17c9a1207e74b688fc226a
   "description": "Configure unit test in jest using this polyfill. It provides fetch and localStorage within your test environment.",
   "main": "lib/index.js",
   "jsnext:main": "dist/@yeutech-lab/test-polyfill.esm.js",

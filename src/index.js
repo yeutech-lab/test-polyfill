@@ -25,7 +25,7 @@ const defaultOptions = {
  * // if you need fetch for node within test, just activate it
  * require('@yeutech-lab/test-polyfill').polyfill({ isomorphicFetch: true })
  */
-export default function polyfill(options) {
+export function polyfill(options) {
   const opts = { ...defaultOptions, ...options };
   if (opts.isomorphicFetch) {
     const Tough = require('tough-cookie');

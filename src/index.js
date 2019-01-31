@@ -15,9 +15,9 @@ const defaultOptions = {
  * - http://www.wheresrhys.co.uk/fetch-mock/
  * - https://github.com/matthew-andrews/isomorphic-fetch
  *
- * @param {object} [default={ isomorphicFetch: true, localStorage: true }] options - An options object
- * @param {boolean} [default=false] options.isomorphicFetch - Replace fetch-mock with fetch-isomorphic + tough-cookie to trigger real fetch requests
- * @param {boolean} [default=true] options.localStorage - Enable localStorage
+ * @param {object} [options={ isomorphicFetch: true, localStorage: true }] - An options object
+ * @param {boolean} [options.isomorphicFetch=false] - Replace fetch-mock with fetch-isomorphic + tough-cookie to trigger real fetch requests
+ * @param {boolean} [options.localStorage=true] - Enable localStorage
  * @example
  * // Use this in your setupFilesAfterEnv test entrypoint
  * require('@yeutech-lab/test-polyfill').polyfill()

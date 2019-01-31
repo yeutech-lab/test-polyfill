@@ -320,24 +320,5 @@
       "<rootDir>/internals/testing/test-bundler.js"
     ]
   },
-  "contributors": [],
-  "transitive": {
-    "name": "test-polyfill",
-    "scope": "yeutech-lab",
-    "scopedName": "@yeutech-lab/test-polyfill",
-    "jsnext:main": "dist/@yeutech-lab/test-polyfill.esm.js",
-    "module": "dist/@yeutech-lab/test-polyfill.esm.js",
-    "homepage": "https://yeutech-lab.github.io/test-polyfill",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/yeutech-lab/test-polyfill.git"
-    },
-    "bugs": {
-      "url": "https://github.com/yeutech-lab/test-polyfill/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
-    }
-  }
+  "contributors": []
 }

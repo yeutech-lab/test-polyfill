@@ -36,7 +36,11 @@ export function polyfill(options) {
     global.cookieJar = cookieJar;
     global.fetchMock = undefined;
   } else {
+    const { Response, Headers, Request } = require('whatwg-fetch');
     global.fetchMock = require('fetch-mock');
+    global.Response = Response;
+    global.Headers = Headers;
+    global.Request = Request;
   }
   if (opts.localStorage && !global.localStorage) {
     global.localStorage = require('localStorage');

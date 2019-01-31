@@ -1,6 +1,6 @@
 {
   "name": "@yeutech/test-polyfill",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Configure unit test in jest using this polyfill. It provides fetch and localStorage within your test environment.",
   "main": "lib/index.js",
   "jsnext:main": "dist/@yeutech/test-polyfill.esm.js",
@@ -38,7 +38,8 @@
     "prestyleguide": "npm run jsdoc",
     "styleguide": "styleguidist server",
     "prestyleguide:build": "npm run jsdoc",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "postinstall": "node -e \"console.log('\\u001b[31m@yeutech/test-polyfill is deprecated, use @yeutech-lab/test-polyfill instead.')\" || exit 0"
   },
   "repository": {
     "type": "git",

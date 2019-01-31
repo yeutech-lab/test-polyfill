@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/yeutech-lab/test-polyfill/compare/v1.0.2...v1.0.3) (2019-01-31)
+
+
+### Bug Fixes
+
+* **documentation:** fixing travis build badge ([dc3e172](https://github.com/yeutech-lab/test-polyfill/commit/dc3e172))
+
 ## [1.0.2](https://github.com/yeutech-lab/test-polyfill/compare/v1.0.1...v1.0.2) (2019-01-31)
 
 

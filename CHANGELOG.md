@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/yeutech-lab/test-polyfill/compare/v1.0.4...v1.0.5) (2019-01-31)
+
+
+### Bug Fixes
+
+* **documentation:** Improve documentation content ([176bddd](https://github.com/yeutech-lab/test-polyfill/commit/176bddd))
+* **documentation:** removing prerequesite and faq ([c97a4ef](https://github.com/yeutech-lab/test-polyfill/commit/c97a4ef))
+
 ## [1.0.4](https://github.com/yeutech-lab/test-polyfill/compare/v1.0.3...v1.0.4) (2019-01-31)
 
 

@@ -13,14 +13,14 @@ Fore more information, read :
 
 ### Parameters
 
--   `default` **[object][4]** options - An options object (optional, default `{isomorphicFetch:true,localStorage:true}`)
--   `default` **[boolean][5]** options.isomorphicFetch - Replace fetch-mock with fetch-isomorphic + tough-cookie to trigger real fetch requests (optional, default `false`)
--   `default` **[boolean][5]** options.localStorage - Enable localStorage (optional, default `true`)
+-   `options` **[object][4]** An options object (optional, default `{isomorphicFetch:true,localStorage:true}`)
+    -   `options.isomorphicFetch` **[boolean][5]** Replace fetch-mock with fetch-isomorphic + tough-cookie to trigger real fetch requests (optional, default `false`)
+    -   `options.localStorage` **[boolean][5]** Enable localStorage (optional, default `true`)
 
 ### Examples
 
 ```javascript
-// append this
+// Use this in your setupFilesAfterEnv test entrypoint
 require('@yeutech-lab/test-polyfill').polyfill()
 ```
 

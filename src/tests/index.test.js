@@ -1,39 +1,31 @@
-/**
- * Testing example
- */
-import DemoClass from '../index';
+import polyfill from '../index';
 
-describe('DemoClass', () => {
-  let demoClass;
-  beforeEach(() => {
-    demoClass = new DemoClass();
+describe('polyfill', () => {
+  it('should polyfill fetch-mock', (done) => {
+    expect(global.fetch).not.toBeDefined();
+    expect(global.fetchMock).not.toBeDefined();
+    polyfill();
+    fetchMock.mock('http://localhost', 200); // eslint-disable-line no-undef
+    expect(global.fetch).toBeDefined();
+    expect(global.fetchMock).toBeDefined();
+    done();
   });
-  it('should be the DemoClass', () => {
-    expect(demoClass instanceof DemoClass).toBe(true);
-  });
-  it('should be the static test', () => {
-    expect(demoClass.getTestStatic()).toBe('This is a static test');
-  });
-  it('should be the test attribute', () => {
-    expect(demoClass.getTestAttribute()).toBe('This is a test attribute');
-  });
-  it('should set the test attribute', () => {
-    demoClass.setTestAttribute('test');
-    expect(demoClass.getTestAttribute()).toBe('test');
-  });
-  it('should include a in list', () => {
-    expect(demoClass.hasInList('a')).toBe(true);
-  });
-  it('should get replaced env', () => {
-    expect(demoClass.getReplacedEnv()).toBe('test');
-  });
-  it('should get rest from spread', () => {
-    expect(demoClass.getIsSpreadActive()).toEqual(true);
-  });
-  it('should get rest from spread', () => {
-    expect(demoClass.getRest()).toEqual({
-      isTestLiving: true,
-      list: ['a', 'b'],
+
+  it('should polyfill fetch', (done) => {
+    polyfill({
+      isomorphicFetch: true,
     });
+    expect(global.fetchMock).not.toBeDefined();
+    fetch('http://test').catch((err) => {
+      expect(err).toBeDefined();
+      done();
+    });
+  });
+
+  it('should not polyfill localStorage', () => {
+    polyfill({
+      localStorage: false,
+    });
+    expect(global.localStorage).toBeDefined();
   });
 });

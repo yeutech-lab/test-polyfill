@@ -52,7 +52,7 @@
     "test",
     "polyfill"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb-base",
@@ -206,18 +206,24 @@
     "webpack": "^4.29.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.3.1"
+    "@babel/runtime": "^7.3.1",
+    "fetch-cookie": "^0.7.2",
+    "fetch-mock": "^7.3.0",
+    "isomorphic-fetch": "^2.2.1",
+    "jest-mock": "^24.0.0",
+    "localStorage": "^1.0.4",
+    "tough-cookie": "^3.0.0"
   },
   "peerDependencies": {},
   "publishConfig": {
-    "tag": "latest",
-    "registry": "https://npm.kopaxgroup.com"
+    "registry": "https://npm.kopaxgroup.com",
+    "tag": "latest"
   },
   "release": {
     "branch": "master",
     "success": false,
     "fail": false,
-    "npmPublish": false,
+    "npmPublish": true,
     "verifyConditions": [
       {
         "path": "@semantic-release/exec",
@@ -298,10 +304,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "statements": 100,
-        "branches": 100,
+        "statements": 92,
+        "branches": 83,
         "functions": 100,
-        "lines": 100
+        "lines": 92
       }
     },
     "moduleDirectories": [
@@ -315,5 +321,23 @@
     ]
   },
   "contributors": [],
-  "private": true
+  "transitive": {
+    "name": "test-polyfill",
+    "scope": "yeutech-lab",
+    "scopedName": "@yeutech-lab/test-polyfill",
+    "jsnext:main": "dist/@yeutech-lab/test-polyfill.esm.js",
+    "module": "dist/@yeutech-lab/test-polyfill.esm.js",
+    "homepage": "https://yeutech-lab.github.io/test-polyfill",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/yeutech-lab/test-polyfill.git"
+    },
+    "bugs": {
+      "url": "https://github.com/yeutech-lab/test-polyfill/issues"
+    },
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org"
+    }
+  }
 }

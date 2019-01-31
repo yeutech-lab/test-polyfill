@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/yeutech-lab/test-polyfill/compare/v1.0.3...v1.0.4) (2019-01-31)
+
+
+### Bug Fixes
+
+* **fetch:** adding whatwg-fetch to import Response, Headers and Request for tests ([3e36429](https://github.com/yeutech-lab/test-polyfill/commit/3e36429))
+
 ## [1.0.3](https://github.com/yeutech-lab/test-polyfill/compare/v1.0.2...v1.0.3) (2019-01-31)
 
 

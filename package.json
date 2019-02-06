@@ -196,7 +196,7 @@
     "jest-mock": "^24.0.0",
     "localStorage": "^1.0.4",
     "tough-cookie": "^3.0.1",
-    "whatwg-fetch": "^3.0.0"
+    "whatwg-fetch": "2.0.4"
   },
   "peerDependencies": {},
   "publishConfig": {

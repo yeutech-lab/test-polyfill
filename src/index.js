@@ -58,7 +58,8 @@ export function polyfill(options) {
   }
 
   if (opts.media) {
-    window.matchMedia = window.matchMedia
+    const root = window || global;
+    root.matchMedia = root.matchMedia
     || function () {
       return {
         matches: false,
@@ -67,7 +68,7 @@ export function polyfill(options) {
       };
     };
 
-    window.requestAnimationFrame = window.requestAnimationFrame
+    root.requestAnimationFrame = root.requestAnimationFrame
     || function (callback) {
       setTimeout(callback, 0);
     };

@@ -1,7 +1,9 @@
 /* eslint-disable global-require */
 const defaultOptions = {
   isomorphicFetch: false,
+  fetch: true,
   localStorage: true,
+  media: true,
 };
 
 /**
@@ -17,7 +19,9 @@ const defaultOptions = {
  *
  * @param {object} [options={ isomorphicFetch: true, localStorage: true }] - An options object
  * @param {boolean} [options.isomorphicFetch=false] - Replace fetch-mock with fetch-isomorphic + tough-cookie to trigger real fetch requests
+ * @paran {boolean} [options.fetch=true] - Use fetch-mock
  * @param {boolean} [options.localStorage=true] - Enable localStorage
+ * @param {boolean} [options.media=true] - Enable matchMedia and requestAnimationFrame
  * @example
  * // Use this in your setupFilesAfterEnv test entrypoint
  * require('@yeutech-lab/test-polyfill').polyfill()
@@ -35,14 +39,37 @@ export function polyfill(options) {
     global.fetch = fetch;
     global.cookieJar = cookieJar;
     global.fetchMock = undefined;
-  } else {
+    const { Response, Headers, Request } = require('whatwg-fetch');
+    global.Response = Response;
+    global.Headers = Headers;
+    global.Request = Request;
+  }
+
+  if (opts.fetch) {
     const { Response, Headers, Request } = require('whatwg-fetch');
     global.fetchMock = require('fetch-mock');
     global.Response = Response;
     global.Headers = Headers;
     global.Request = Request;
   }
+
   if (opts.localStorage && !global.localStorage) {
     global.localStorage = require('localStorage');
+  }
+
+  if (opts.media) {
+    window.matchMedia = window.matchMedia
+    || function () {
+      return {
+        matches: false,
+        addListener() {},
+        removeListener() {},
+      };
+    };
+
+    window.requestAnimationFrame = window.requestAnimationFrame
+    || function (callback) {
+      setTimeout(callback, 0);
+    };
   }
 }

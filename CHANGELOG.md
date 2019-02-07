@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/yeutech-lab/test-polyfill/compare/v1.1.1...v1.1.2) (2019-02-07)
+
+
+### Bug Fixes
+
+* **polyfill:** using try catch to determine if browser or node environment ([645cfbe](https://github.com/yeutech-lab/test-polyfill/commit/645cfbe))
+
 ## [1.1.1](https://github.com/yeutech-lab/test-polyfill/compare/v1.1.0...v1.1.1) (2019-02-07)
 
 

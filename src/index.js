@@ -38,19 +38,12 @@ export function polyfill(options) {
     const fetch = require('fetch-cookie')(require('isomorphic-fetch'), cookieJar);
     global.fetch = fetch;
     global.cookieJar = cookieJar;
-    global.fetchMock = undefined;
-    const { Response, Headers, Request } = require('whatwg-fetch');
-    global.Response = Response;
-    global.Headers = Headers;
-    global.Request = Request;
+    require('whatwg-fetch');
   }
 
-  if (opts.fetch) {
-    const { Response, Headers, Request } = require('whatwg-fetch');
+  if (opts.fetch && !opts.isomorphicFetch) {
+    require('whatwg-fetch');
     global.fetchMock = require('fetch-mock');
-    global.Response = Response;
-    global.Headers = Headers;
-    global.Request = Request;
   }
 
   if (opts.localStorage && !global.localStorage) {

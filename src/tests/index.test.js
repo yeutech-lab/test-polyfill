@@ -24,6 +24,7 @@ describe('polyfill', () => {
     expect(global.Response).not.toBeDefined();
     polyfill({
       media: false,
+      isomorphicFetch: false,
       fetch: true,
       localStorage: false,
     });
@@ -38,7 +39,10 @@ describe('polyfill', () => {
 
   it('should polyfill fetch', (done) => {
     polyfill({
+      media: false,
       isomorphicFetch: true,
+      fetch: false,
+      localStorage: false,
     });
     expect(global.Headers).toBeDefined();
     expect(global.Request).toBeDefined();
@@ -51,6 +55,9 @@ describe('polyfill', () => {
 
   it('should not polyfill localStorage', () => {
     polyfill({
+      media: false,
+      isomorphicFetch: false,
+      fetch: false,
       localStorage: false,
     });
     expect(global.localStorage).toBeDefined();

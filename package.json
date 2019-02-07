@@ -190,7 +190,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.3.1",
-    "@yeutech-lab/isomorphic-fetch": "^2.2.2",
+    "@yeutech-lab/isomorphic-fetch": "^2.2.1",
     "fetch-cookie": "^0.7.2",
     "fetch-mock": "^7.3.0",
     "jest-mock": "^24.0.0",

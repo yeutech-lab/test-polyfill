@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/yeutech-lab/test-polyfill/compare/v1.1.0...v1.1.1) (2019-02-07)
+
+
+### Bug Fixes
+
+* **fetch:** set version of whatwg-fetch to 2.0.4 ([f866d80](https://github.com/yeutech-lab/test-polyfill/commit/f866d80))
+* **polyfill:** fix media polyfill ([beb7107](https://github.com/yeutech-lab/test-polyfill/commit/beb7107))
+* **test:** repair test ([d4eee4c](https://github.com/yeutech-lab/test-polyfill/commit/d4eee4c))
+
 # [1.1.0](https://github.com/yeutech-lab/test-polyfill/compare/v1.0.5...v1.1.0) (2019-02-06)
 
 

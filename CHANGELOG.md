@@ -1,3 +1,11 @@
+## [1.1.3](https://github.com/yeutech-lab/test-polyfill/compare/v1.1.2...v1.1.3) (2019-02-07)
+
+
+### Bug Fixes
+
+* **polyfill:** do not reject public suffix ([1eab6c4](https://github.com/yeutech-lab/test-polyfill/commit/1eab6c4))
+* **polyfill:** fix localStorage ([46f98e4](https://github.com/yeutech-lab/test-polyfill/commit/46f98e4))
+
 ## [1.1.2](https://github.com/yeutech-lab/test-polyfill/compare/v1.1.1...v1.1.2) (2019-02-07)
 
 

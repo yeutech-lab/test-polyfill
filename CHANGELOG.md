@@ -1,3 +1,11 @@
+## [1.1.4](https://github.com/yeutech-lab/test-polyfill/compare/v1.1.3...v1.1.4) (2019-02-07)
+
+
+### Bug Fixes
+
+* **dependencies:** switch to [@yeutech-lab](https://github.com/yeutech-lab)/isomorphic-fetch due to https://github.com/matthew-andrews/isomorphic-fetch/issues/181 ([d52071c](https://github.com/yeutech-lab/test-polyfill/commit/d52071c))
+* **dependencies:** Using fixed [@yeutech-lab](https://github.com/yeutech-lab)/isomorphic-fetch ([912714b](https://github.com/yeutech-lab/test-polyfill/commit/912714b))
+
 ## [1.1.3](https://github.com/yeutech-lab/test-polyfill/compare/v1.1.2...v1.1.3) (2019-02-07)
 
 

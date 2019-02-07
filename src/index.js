@@ -43,10 +43,9 @@ export function polyfill(options) {
 
     const rejectPublicSuffixes = false; // See https://github.com/salesforce/tough-cookie#cookiejarstoreoptions
     const cookieJar = new Tough.CookieJar(Store, rejectPublicSuffixes);
-    const fetch = require('fetch-cookie')(require('isomorphic-fetch'), cookieJar);
+    const fetch = require('fetch-cookie')(require('@yeutech-lab/isomorphic-fetch'), cookieJar);
     root.fetch = fetch;
     root.cookieJar = cookieJar;
-    require('whatwg-fetch');
   }
 
   if (opts.fetch && !opts.isomorphicFetch) {

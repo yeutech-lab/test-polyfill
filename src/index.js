@@ -52,7 +52,7 @@ export function polyfill(options) {
     root.fetchMock = require('fetch-mock');
   }
 
-  if (root.localStorage && !root.localStorage) {
+  if (opts.localStorage && !root.localStorage) {
     root.localStorage = require('localStorage');
   }
 

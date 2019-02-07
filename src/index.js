@@ -31,27 +31,32 @@ const defaultOptions = {
  */
 export function polyfill(options) {
   const opts = { ...defaultOptions, ...options };
+  let root = null;
+  try {
+    root = window || global;
+  } catch (e) {
+    root = global;
+  }
   if (opts.isomorphicFetch) {
     const Tough = require('tough-cookie');
     const Store = new Tough.MemoryCookieStore();
     const cookieJar = new Tough.CookieJar(Store);
     const fetch = require('fetch-cookie')(require('isomorphic-fetch'), cookieJar);
-    global.fetch = fetch;
-    global.cookieJar = cookieJar;
+    root.fetch = fetch;
+    root.cookieJar = cookieJar;
     require('whatwg-fetch');
   }
 
   if (opts.fetch && !opts.isomorphicFetch) {
     require('whatwg-fetch');
-    global.fetchMock = require('fetch-mock');
+    root.fetchMock = require('fetch-mock');
   }
 
-  if (opts.localStorage && !global.localStorage) {
-    global.localStorage = require('localStorage');
+  if (root.localStorage && !root.localStorage) {
+    root.localStorage = require('localStorage');
   }
 
   if (opts.media) {
-    const root = window || global;
     root.matchMedia = root.matchMedia
     || function () {
       return {

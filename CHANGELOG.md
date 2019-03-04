@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/yeutech-lab/test-polyfill/compare/v1.1.4...v1.1.5) (2019-03-04)
+
+
+### Bug Fixes
+
+* **ncu:** lock whatwg-fetch and install [@rollup-umd](https://github.com/rollup-umd)/ncu ([7c31c29](https://github.com/yeutech-lab/test-polyfill/commit/7c31c29))
+
 ## [1.1.4](https://github.com/yeutech-lab/test-polyfill/compare/v1.1.3...v1.1.4) (2019-02-07)
 
 

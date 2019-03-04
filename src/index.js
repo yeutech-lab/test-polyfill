@@ -58,7 +58,7 @@ export function polyfill(options) {
   }
 
   if (opts.media) {
-    root.matchMedia = root.matchMedia
+    root.matchMedia = root.matchMedia // eslint-disable-line func-names
     || function () {
       return {
         matches: false,
@@ -68,7 +68,7 @@ export function polyfill(options) {
     };
 
     root.requestAnimationFrame = root.requestAnimationFrame
-    || function (callback) {
+    || function (callback) { // eslint-disable-line func-names
       setTimeout(callback, 0);
     };
   }
